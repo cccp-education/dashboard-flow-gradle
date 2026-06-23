@@ -1,7 +1,7 @@
 = Index des Sessions — Dashboard-Flow Gradle Plugin
 
 _Derniere mise a jour_ : 2026-06-23 — Session 000
-_Session terminee_ : 000
+_Session terminee_ : 000 ✅
 _Prochaine session_ : 001 — DFL-1 React Flow dashboard de base
 
 '''
@@ -10,7 +10,7 @@ _Prochaine session_ : 001 — DFL-1 React Flow dashboard de base
 
 |===
 | Borough | Project | DAG | Role in MVP0 | Session
-| Brooklin Flow | dashboard-flow-gradle | N3 | Dashboard React Flow interactif du graphe de connaissance | S000
+| Brooklin Flow | dashboard-flow-gradle | N3 | Dashboard React Flow interactif du graphe de connaissance | S000 ✅
 |===
 
 == Regles Absolues
@@ -40,7 +40,7 @@ _L'agent NE DOIT JAMAIS_ executer de commit, push, merge SANS permission explici
 
 |===
 | # | Date | Type | Sujet | Score
-| 000 | 2026-06-23 | gouvernance | **Bootstrap Dashboard-Flow** — AGENT.adoc, INDEX.adoc, PROMPT_REPRISE, BACKLOG, TODO, SESSIONS_HISTORY, structure repertoire. ZERO code source. | -
+| 000 | 2026-06-23 | gouvernance | **Bootstrap Dashboard-Flow** — AGENT.adoc, INDEX.adoc, PROMPT_REPRISE, BACKLOG, TODO, SESSIONS_HISTORY, structure repertoire, integration portefeuille global. ZERO code source. | 10/10
 |===
 
 '''
@@ -49,7 +49,7 @@ _L'agent NE DOIT JAMAIS_ executer de commit, push, merge SANS permission explici
 
 |===
 | EPIC | Sujet | Pts | Priorite | Statut | Borough
-| DFL-0 | Bootstrap gouvernance + structure projet | 3 | P0 | 🔄 S000 | Brooklin Flow
+| DFL-0 | Bootstrap gouvernance + structure projet | 3 | P0 | ✅ S000 (3/3 pts) | Brooklin Flow
 | DFL-1 | React Flow dashboard de base | 8 | P0 | PLANIFIE | Brooklin Flow
 | DFL-2 | Enrichissement schema graphify | 5 | P1 | PLANIFIE | graphify-gradle
 | DFL-3 | Diff impact analysis | 5 | P1 | PLANIFIE | graphify-gradle
@@ -94,7 +94,7 @@ _L'agent NE DOIT JAMAIS_ executer de commit, push, merge SANS permission explici
 | Grand Central | graphify-gradle | N0 | Graphe connaissance | —
 | Liberty | api-key-pool-gradle | N0 | Pool cles API LLM | —
 | Dashboard | dashboard-gradle | N3 | Dashboard vision/avancement | S009
-| Brooklin Flow | dashboard-flow-gradle | N3 | Dashboard React Flow interactif | S000
+| Brooklin Flow | dashboard-flow-gradle | N3 | Dashboard React Flow interactif | S000 ✅
 |===
 
 '''
