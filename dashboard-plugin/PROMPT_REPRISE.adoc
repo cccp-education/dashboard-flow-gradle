@@ -1,0 +1,38 @@
+= PROMPT_REPRISE — dashboard-flow-gradle
+:session: 000
+:date: 2026-06-23
+
+== Mission de la session en cours
+
+**DFL-0 — Bootstrap gouvernance + structure du borough dashboard-flow-gradle.**
+
+Créer la gouvernance agent, le backlog et la structure de repertoire pour le
+nouveau borough. AUCUN code source Kotlin/React n'est attendu en S000.
+
+== Livrables attendus S000
+
+. `AGENT.adoc`
+. `BACKLOG.adoc`
+. `TODO.adoc`
+. `.agents/INDEX.adoc`
+. `.agents/SESSIONS_HISTORY.adoc`
+. Structure des repertoires `.agents/sessions/`, `.agents/archives/`, etc.
+. Reference dans `DASHBOARD_REACT_FLOW.adoc`
+. Mise a jour portefeuille dashboard-gradle
+
+== Prochaine session (S001)
+
+**DFL-1 — React Flow dashboard de base** :
+
+. Scaffold Vite + React + TypeScript + React Flow
+. Chargement du `graph.json` de graphify-gradle
+. Rendu initial nodes/edges
+. Sidebar d'info et recherche simple
+. Tests unitaires Vitest
+
+== References
+
+* `DASHBOARD_REACT_FLOW.adoc` (racine workspace)
+* `AGENT.adoc`
+* `.agents/INDEX.adoc`
+* `BACKLOG.adoc`

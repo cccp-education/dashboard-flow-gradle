@@ -1,0 +1,108 @@
+= Index des Sessions — Dashboard-Flow Gradle Plugin
+
+_Derniere mise a jour_ : 2026-06-23 — Session 000
+_Session terminee_ : 000
+_Prochaine session_ : 001 — DFL-1 React Flow dashboard de base
+
+'''
+
+== Borough
+
+|===
+| Borough | Project | DAG | Role in MVP0 | Session
+| Brooklin Flow | dashboard-flow-gradle | N3 | Dashboard React Flow interactif du graphe de connaissance | S000
+|===
+
+== Regles Absolues
+
+=== 0. PUBLISH TO MAVEN LOCAL — OBLIGATOIRE
+
+_Toute modification du code source du plugin DOIT etre suivie de `./gradlew -q publishToMavenLocal` AVANT tout test fonctionnel._
+
+=== 1. COMMITS/GIT
+
+_L'agent NE DOIT JAMAIS_ executer de commit, push, merge SANS permission explicite de l'utilisateur.
+
+=== 2. TESTS EN FIN DE SESSION — INTERDICTION FORMELLE
+
+=== 3. PROCEDURE DE FIN DE SESSION — 6 ETAPES
+
+. Creer l'archive `.agents/sessions/{N}-{titre}.adoc`
+. Mettre a jour `PROMPT_REPRISE.adoc` pour la session N+1
+. Mettre a jour `SESSIONS_HISTORY.adoc`
+. Mettre a jour `INDEX.adoc` (session en cours, roadmap)
+. Mettre a jour `TEST_COVERAGE_ANALYSIS.adoc` (si tests modifies)
+. Mettre a jour `COMPLETED_TASKS_ARCHIVE_{mois}.adoc` dans `.agents/archives/`
+
+'''
+
+== Sessions Recentes
+
+|===
+| # | Date | Type | Sujet | Score
+| 000 | 2026-06-23 | gouvernance | **Bootstrap Dashboard-Flow** — AGENT.adoc, INDEX.adoc, PROMPT_REPRISE, BACKLOG, TODO, SESSIONS_HISTORY, structure repertoire. ZERO code source. | -
+|===
+
+'''
+
+== Roadmap — EPICs
+
+|===
+| EPIC | Sujet | Pts | Priorite | Statut | Borough
+| DFL-0 | Bootstrap gouvernance + structure projet | 3 | P0 | 🔄 S000 | Brooklin Flow
+| DFL-1 | React Flow dashboard de base | 8 | P0 | PLANIFIE | Brooklin Flow
+| DFL-2 | Enrichissement schema graphify | 5 | P1 | PLANIFIE | graphify-gradle
+| DFL-3 | Diff impact analysis | 5 | P1 | PLANIFIE | graphify-gradle
+| DFL-4 | Guided tours | 5 | P2 | PLANIFIE | Brooklin Flow
+| DFL-5 | Fingerprinting incremental | 5 | P2 | PLANIFIE | graphify-gradle
+| DFL-6 | RAG + persona UI + wiki | 8 | P2 | PLANIFIE | Brooklin Flow
+| DFL-7 | Deploiement gh-pages via runner | 3 | P1 | PLANIFIE | Brooklin Flow
+| PUB | Publication Maven Central nmcp | 5 | P1 | PLANIFIE | Brooklin Flow
+|===
+
+'''
+
+== Portefeuille
+
+=== Projets gouvernes (extrait — 28 boroughs)
+
+|===
+| Borough | Projet | DAG | Role | Session
+| Newark | training-gradle | N2 | Pipeline formation (COEUR) | —
+| Manhattan | planner-gradle | N2 | LLM prompting SPG/SPD | —
+| Brooklyn | codex-gradle | N2 | Asciidoctor→PDF, slides | —
+| Queens | codebase-gradle | N1 | RAG socle, pgvector | —
+| The Bronx | quizz-benchmark-gradle | N2 | Quiz evaluation | —
+| Staten Island | magic-stick | N2 | Site formation | —
+| New Jersey | runner-gradle | N3 | Orchestration DAG, deploy | —
+| Compton | waiter-gradle | N2 | Paiement, facturation | —
+| Detroit | capsule-gradle | N2 | Capture video capsule | —
+| South Central | workspace-gradle | N4 | Scaffold workspace | —
+| Long Island | workspace-agent | N-IDE | Cockpit IntelliJ | —
+| Watts | hyperframes-gradle | N2 | AsciiDoc→MP4 | —
+| Chiraq | readme-gradle | N2 | README PlantUML | —
+| New Orleans | document-gradle | N2 | Doc multi-format | —
+| Atlanta | agile-gradle | N4 | Pilotage agile IA | —
+| Harlem | ticket-gradle | N4 | Tickets GitHub | —
+| Baltimore | review-gradle | N4 | Code review IA | —
+| Oakland | flow-gradle | N4 | Orchestration merge/CI | —
+| Philly | jhipster-gradle | N2 | JHipster tooling | —
+| Bushwick | bakery-gradle | N2 | Site statique JBake | —
+| MIAMI | slider-gradle | N2 | Slides Reveal.js | —
+| MEMPHIS | workspace-bom | N0 | BOM partage | —
+| HTOWN | plantuml-gradle | N2 | Diagrammes LLM | —
+| Grand Central | graphify-gradle | N0 | Graphe connaissance | —
+| Liberty | api-key-pool-gradle | N0 | Pool cles API LLM | —
+| Dashboard | dashboard-gradle | N3 | Dashboard vision/avancement | S009
+| Brooklin Flow | dashboard-flow-gradle | N3 | Dashboard React Flow interactif | S000
+|===
+
+'''
+
+== Liens Utiles
+
+* Comparaison UA : `DASHBOARD_REACT_FLOW.adoc` (racine workspace)
+* AGENT : `AGENT.adoc`
+* BACKLOG : `BACKLOG.adoc`
+* TODO : `TODO.adoc`
+* PROMPT_REPRISE : `PROMPT_REPRISE.adoc`

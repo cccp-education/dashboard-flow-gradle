@@ -1,0 +1,6 @@
+= SESSIONS_HISTORY — dashboard-flow-gradle
+
+|===
+| # | Date | Objet | Fichiers
+| 000 | 2026-06-23 | Bootstrap gouvernance Dashboard-Flow — AGENT.adoc, INDEX.adoc, PROMPT_REPRISE, BACKLOG, TODO, SESSIONS_HISTORY, structure repertoire, integration portefeuille dashboard-gradle + AGENTS.adoc racine workspace | 8+ fichiers crees
+|===

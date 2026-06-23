@@ -1,0 +1,52 @@
+= Session 000 — Bootstrap Gouvernance Dashboard-Flow
+:date: 2026-06-23
+:type: gouvernance
+:borough: dashboard-flow-gradle
+
+== Objectif
+
+Créer le borough `dashboard-flow-gradle` (Brooklin Flow) suite à la comparaison
+avec le projet Understand-Anything (Egonex-AI). Cette session ne produit aucun
+code source Kotlin/React — uniquement la gouvernance, la structure de repertoire
+et l'intégration dans la littérature globale.
+
+== Travail realise
+
+. Creation de `DASHBOARD_REACT_FLOW.adoc` a la racine du workspace
+  * Comparaison complete Understand-Anything vs CCCP
+  * Decision de creation d'un nouveau borough distinct d'ALGER
+  * Plan d'attaque DFL-0 → DFL-7 + PUB
+. Mise a jour de la gouvernance globale
+  * `AGENTS.adoc` : ajout du 28eme borough Brooklin Flow
+  * Mise a jour du portefeuille (table + chaine de valeur + historique)
+. Creation du backlog global `BACKLOG.adoc` a la racine du workspace
+. Creation de la structure `foundry/public/dashboard-flow-gradle/dashboard-plugin/`
+  * `AGENT.adoc`, `BACKLOG.adoc`, `TODO.adoc`, `PROMPT_REPRISE.adoc`
+  * `.agents/INDEX.adoc`, `.agents/SESSIONS_HISTORY.adoc`
+  * Repertoires `.agents/sessions/`, `.agents/archives/`, `.agents/encyclopedies/`, `.agents/backup/`
+. Mise a jour du portefeuille `dashboard-gradle/dashboard-plugin/.agents/INDEX.adoc`
+  * Reference au nouveau borough Brooklin Flow
+
+== Livrables
+
+|===
+| Fichier | Etat
+| `DASHBOARD_REACT_FLOW.adoc` | ✅ cree
+| `BACKLOG.adoc` (racine) | ✅ cree
+| `AGENTS.adoc` (racine) | ✅ modifie
+| `dashboard-flow-gradle/dashboard-plugin/AGENT.adoc` | ✅ cree
+| `dashboard-flow-gradle/dashboard-plugin/BACKLOG.adoc` | ✅ cree
+| `dashboard-flow-gradle/dashboard-plugin/TODO.adoc` | ✅ cree
+| `dashboard-flow-gradle/dashboard-plugin/PROMPT_REPRISE.adoc` | ✅ cree
+| `dashboard-flow-gradle/dashboard-plugin/.agents/INDEX.adoc` | ✅ cree
+| `dashboard-flow-gradle/dashboard-plugin/.agents/SESSIONS_HISTORY.adoc` | ✅ cree
+| `dashboard-gradle/dashboard-plugin/.agents/INDEX.adoc` | ✅ modifie
+|===
+
+== Résultat / Score
+
+Gouvernance complete initialisee. 0 tests (pas de code). Score : 10/10.
+
+== Prochaine session
+
+DFL-1 — React Flow dashboard de base (Vite + React + TypeScript + graph.json).

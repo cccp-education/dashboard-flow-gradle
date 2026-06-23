@@ -1,0 +1,41 @@
+= BACKLOG — dashboard-flow-gradle
+
+== P0 — Planifie
+
+|===
+| Item | EPIC | Pts | Session
+| Bootstrap gouvernance (AGENT, INDEX, BACKLOG, PROMPT_REPRISE, SESSIONS_HISTORY) | DFL-0 | 3 | S000
+| Creer structure repertoire dashboard-plugin/ + ui/ | DFL-0 | 1 | S000
+| Scaffold Gradle plugin minimal | DFL-0 | 2 | S000
+| Scaffold Vite + React + TypeScript + React Flow | DFL-1 | 2 | S001
+| Charger graph.json de graphify-gradle dans React Flow | DFL-1 | 3 | S001
+| Sidebar d'info + recherche simple | DFL-1 | 3 | S001
+|===
+
+== P1 — Planifie
+
+|===
+| Item | EPIC | Pts
+| Diff impact analysis (graph.json courant vs HEAD) | DFL-3 | 5
+| Enrichissement schema GraphModel (types + alias) | DFL-2 | 5
+| Fingerprinting incremental dans graphify | DFL-5 | 5
+| Deploiement gh-pages via runner-gradle | DFL-7 | 3
+| Publication Maven Central nmcp | PUB | 5
+|===
+
+== P2 — Planifie
+
+|===
+| Item | EPIC | Pts
+| Guided tours auto-générés | DFL-4 | 5
+| Recherche sémantique via codebase-gradle RAG | DFL-6 | 5
+| Persona-adaptive UI | DFL-6 | 3
+| Wiki Karpathy ingestion | DFL-6 | 3
+|===
+
+== Historique
+
+|===
+| Date | Modification
+| 2026-06-23 | Creation du backlog initial avec DFL-0→DFL-7 + PUB
+|===

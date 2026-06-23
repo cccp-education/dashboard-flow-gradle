@@ -1,0 +1,8 @@
+= TODO — dashboard-flow-gradle
+
+- [ ] Finaliser gouvernance DFL-0 (INDEX, SESSIONS_HISTORY, PROMPT_REPRISE)
+- [ ] Initialiser repo git `dashboard-flow-gradle`
+- [ ] Configurer remote GitHub (github.com/cccp-education/dashboard-flow-gradle)
+- [ ] Vérifier que graph.json est lisible depuis le nouveau plugin
+- [ ] Choisir palette couleurs React Flow (dark luxury ou CCCP)
+- [ ] Benchmark taille graph.json pour perf React Flow

@@ -1,0 +1,169 @@
+= Dashboard-Flow Gradle Plugin — Directives Agent
+:toc: left
+:toclevels: 3
+:icons: font
+:sectnums:
+
+[CAUTION]
+====
+**ARRET OBLIGATOIRE** avant `rm`, `Write` (ecrasement), ou suppression de fichier :
+1. LIRE le fichier en entier
+2. VERIFIER `git ls-files -- <fichier>` (si pas dans git = pas de retour possible)
+3. DEMANDER confirmation fichier par fichier a l'utilisateur
+4. ATTENDRE "oui" avant d'agir
+====
+
+== Avertissement — Racine de Travail
+
+**Ce fichier est dans `dashboard-plugin/`**, la racine de travail du projet.
+
+La racine du depot git (`dashboard-flow-gradle/`) ne contient QUE le repo git et les fichiers
+de build Gradle. TOUT le reste (code, tests, gouvernance, documentation agent) vit ici.
+
+* Les chemins dans ce fichier sont relatifs a **`dashboard-plugin/`**
+* L'agent travaille depuis **`dashboard-plugin/`**
+* Les commandes Gradle s'executent depuis **`dashboard-plugin/`** ou avec `-p dashboard-plugin`
+
+== Projet
+
+**Nom** : dashboard-flow-gradle (plugin Gradle pour dashboard React Flow interactif de connaissance workspace)
+**Borough** : dashboard-flow-gradle 🟢 (Brooklin Flow)
+**DAG** : N3 (consommateur terminal, UI interactive)
+**Stack** : Kotlin (Gradle plugin), TypeScript/React/React Flow, Vite, Vitest
+**Documentation** : AsciiDoc + DASHBOARD_REACT_FLOW.adoc (racine workspace)
+
+=== Positionnement dans le DAG
+
+dashboard-flow-gradle est un N3 consommateur terminal. Il lit le `graph.json` de
+`graphify-gradle` (N0) et éventuellement les métriques d'avancement de
+`dashboard-gradle` (N3). Il ne contient AUCUNE logique métier LLM/RAG.
+
+== Regles Absolues
+
+=== Git
+
+**INTERDICTION FORMELLE** de commit/push/merge sans permission explicite de l'utilisateur.
+
+Commandes autorisees (lecture seule) : `git status`, `git diff`, `git log`, `git show`
+Commandes interdites (sauf ordre) : `git add`, `git commit`, `git push`, `git merge`, `git rebase`
+
+=== Tests
+
+L'agent NE DOIT JAMAIS lancer de tests (`./gradlew test`, `pnpm test`, etc.) lors de la procedure de fin de session SANS permission explicite de l'utilisateur.
+
+=== Securite
+* Jamais de secrets en dur dans le code
+* Jamais de credentials dans les fichiers de config
+* Jamais de tokens API commites dans Git
+
+=== Fichiers de configuration — REGLE ABSOLUE DE SURETE
+
+**NE JAMAIS ecraser** un fichier de configuration existant avec un `Write` complet si on peut faire un `Edit` partiel.
+**NE JAMAIS remplacer** des valeurs sensibles existantes par des valeurs factices.
+**NE JAMAIS modifier** un fichier sans avoir d'abord verifie `git check-ignore` et `git ls-files`.
+
+=== Fichiers personnels — Interdiction de modifier
+
+L'agent NE DOIT JAMAIS modifier, ecraser ou supprimer un fichier personnel de l'utilisateur (`~/.gitconfig`, `~/.bashrc`, etc.) SANS permission explicite.
+
+== Architecture
+
+=== Structure du Projet
+
+[source,bash]
+----
+dashboard-flow-plugin/              # RACINE DE TRAVAIL (ce repertoire)
+|-- src/main/kotlin/                # Plugin Kotlin (chargement graph.json, build UI)
+|-- src/test/                        # Tests unitaires + fonctionnels
+|-- ui/                              # Application React Flow (Vite + TypeScript)
+|-- .agents/                         # Documentation agent
+|   |-- INDEX.adoc                   # Roadmap + EPICs + portefeuille
+|   |-- SESSIONS_HISTORY.adoc        # Historique des sessions
+|   |-- sessions/                     # Archives par session
+|   |-- archives/                     # Archives mensuelles
+|   |-- encyclopedies/                # Connaissance froide
+|   |-- backup/                       # Vagues froides
+|-- PROMPT_REPRISE.adoc              # Mission session en cours
+|-- AGENT.adoc                       # Directives completes (ce fichier)
+|-- BACKLOG.adoc                     # Suivi prioritaire des taches
+|-- TODO.adoc                        # Pense-bete informel
++-- build.gradle.kts                 # Build du plugin
+----
+
+=== Composants Cles
+
+* **DashboardFlowPlugin** : Point d'entree Gradle
+* **GraphLoader** : Charge `graph.json` depuis graphify-gradle
+* **UiPackager** : Empaquette l'application React Flow en assets statiques
+* **DashboardFlowTask** : Tache Gradle generant le site React Flow
+* **PublishDashboardFlowTask** : Deploiement consommable par runner-gradle
+
+=== Commandes Utiles
+
+[source,bash]
+----
+# Depuis la racine de travail (dashboard-plugin/)
+./gradlew compileKotlin
+./gradlew test
+./gradlew check
+# UI React Flow
+cd ui && pnpm install && pnpm test && pnpm build
+----
+
+== EPICs Planifiees
+
+|===
+| EPIC | Sujet | Priorite | Statut
+| DFL-0 | Bootstrap gouvernance + structure projet | P0 | EN COURS
+| DFL-1 | React Flow dashboard de base | P0 | PLANIFIE
+| DFL-2 | Enrichissement schema graphify | P1 | PLANIFIE
+| DFL-3 | Diff impact analysis | P1 | PLANIFIE
+| DFL-4 | Guided tours | P2 | PLANIFIE
+| DFL-5 | Fingerprinting incremental | P2 | PLANIFIE
+| DFL-6 | RAG + persona UI + wiki | P2 | PLANIFIE
+| DFL-7 | Deploiement gh-pages via runner | P1 | PLANIFIE
+| PUB | Publication Maven Central nmcp | P1 | PLANIFIE
+|===
+
+== Gestion du Contexte
+
+* **Que faire ensuite ?** -> **`BACKLOG.adoc`**
+* **`TODO.adoc`** -> pense-bete informel
+* **`PROMPT_REPRISE.adoc`** -> mission de la session en cours
+
+== Fichiers EAGER — chemins relatifs a dashboard-plugin/
+
+|===
+| Fichier | Role
+| `PROMPT_REPRISE.adoc` | Mission session en cours (max 70 lignes)
+| `.agents/INDEX.adoc` | Roadmap + EPICs + sessions recentes
+| `AGENT.adoc` | Ce fichier — Directives completes
+| `DASHBOARD_REACT_FLOW.adoc` (racine workspace) | Comparaison UA + plan d'attaque
+|===
+
+== Fichiers LAZY (sur demande)
+
+|===
+| Fichier | Role
+| `.agents/sessions/{N}*.adoc` | Archives detaillees par session
+| `.agents/archives/COMPLETED_TASKS_ARCHIVE_*.adoc` | Archive des taches terminees
+|===
+
+== Anti-Patterns
+
+|===
+| # | Anti-Pattern | Prevention
+| 1 | UI sans vrai graph.json | Toujours charger le graph.json de graphify-gradle
+| 2 | Logique LLM dans le frontend | L'enrichissement est pre-calculé par Gradle
+| 3 | Couper dashboard-gradle | dashboard-flow est complementaire, pas remplacant
+|===
+
+== References — Codebases LAZY
+
+|===
+| Projet | Chemin | Role
+| dashboard-gradle | `/home/cheroliv/workspace/foundry/public/dashboard-gradle/dashboard-plugin` | Reference dashboard N3 + theme
+| graphify-gradle | `/home/cheroliv/workspace/foundry/public/graphify-gradle/graphify-plugin` | Source graph.json
+| runner-gradle | `/home/cheroliv/workspace/foundry/public/runner-gradle` | Reference deploiement N3
+| Understand-Anything | https://github.com/Egonex-AI/Understand-Anything | Reference React Flow + KG schema
+|===
