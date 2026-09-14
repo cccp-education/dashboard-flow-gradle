@@ -1,0 +1,69 @@
+= Session 001 — Cadrage EPIC DSH-BOUNDARY (cross-borough)
+
+:date: 2026-09-14
+:type: gouvernance pure
+:borough: dashboard-flow-gradle (Brooklin Flow) — miroir ALGER S-216
+:score: 10/10
+
+== Objectif
+
+Aligner Brooklin Flow sur la frontière Dashboard actée au cadrage S-216
+(côté ALGER) : ALGER = pilotage (chiffres) / Brooklin Flow = navigation
+(structure) / Edster = interactif privé.
+
+Session de gouvernance pure (pattern S-057/S-063). *Zéro code modifié.*
+
+== Frontière pour Brooklin Flow
+
+* *Lit* : `graph.json` (graphify N0) — structure/relations.
+  + `dashboard-data.json` (produit par ALGER) — overlay de coloration.
+* *Ne fait jamais* : calcul de métrique, parsing des `.adoc` de
+  gouvernance, logique LLM dans le front, action serveur.
+* *Anti-patterns ajoutés* : #4 (calcul de métrique), #5 (parsing `.adoc`),
+  #6 (serveur/action dans l'UI).
+
+== Absorption des EPICs DFL
+
+[cols="2,2", options="header"]
+|===
+| Ancien | Devenir
+| DFL-1 React Flow base | ✅ Absorbé DSH-BOUNDARY-5
+| DFL-3 Diff impact | ✅ Absorbé DSH-BOUNDARY-6
+| DFL-7 Déploiement gh-pages | ✅ Absorbé DSH-BOUNDARY-7
+| DFL-2 Enrichissement schéma | 🟡 Reste EPIC graphify (N0)
+| DFL-5 Fingerprinting | 🟡 Reste EPIC graphify (N0)
+| DFL-4 Guided tours | 🟡 P2 Brooklin Flow
+| DFL-6 RAG + persona + wiki | 🟡 P2 Brooklin Flow (+ codebase)
+|===
+
+== Découpage US (territoire navigation, 3 US ~11 pts)
+
+[cols="1,3,1,1", options="header"]
+|===
+| US | Description | Statut | Pts
+| DSH-BOUNDARY-5 | Graphe React Flow + filtres + overlay + panneau récap | 🔲 À FAIRE | 5
+| DSH-BOUNDARY-6 | Diff structurel entre deux `graph.json` | 🔲 À FAIRE | 5
+| DSH-BOUNDARY-7 | Publication gh-pages (avec ALGER) | 🔲 À FAIRE | 1
+|===
+
+== Livrables
+
+[cols="3,1", options="header"]
+|===
+| Fichier | État
+| `.agents/CADRAGE_EPIC_DSH_BOUNDARY.adoc` (copie) | ✅ créé
+| `AGENT.adoc` (anti-patterns + frontière) | ✅ modifié
+| `BACKLOG.adoc` (absorption DFL + DSH-BOUNDARY) | ✅ modifié
+| `.agents/INDEX.adoc` | ✅ modifié
+| `PROMPT_REPRISE.adoc` (→ 002) | ✅ modifié
+| `.agents/SESSIONS_HISTORY.adoc` | ✅ modifié
+|===
+
+== Prochaine session (002)
+
+DSH-BOUNDARY-5 (graphe React Flow + overlay). Prérequis : DSH-BOUNDARY-2
+(contrat `dashboard-data.json` versionné) livré côté ALGER.
+
+== Zéro code
+
+Aucun fichier Kotlin/React/Gradle modifié. Session de gouvernance pure.

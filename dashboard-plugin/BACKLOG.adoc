@@ -1,36 +1,61 @@
 = BACKLOG — dashboard-flow-gradle
 
-== P0 — Planifie
+_Dernière mise à jour : 2026-09-14 (S-001 — Cadrage EPIC DSH-BOUNDARY cross-borough, S-216 côté ALGER : frontière ALGER / Brooklin Flow / Edster. Absorption DFL-1/DFL-3/DFL-7. Zéro code modifié.)_
+
+== P0 — Termine
 
 |===
 | Item | EPIC | Pts | Session
-| Bootstrap gouvernance (AGENT, INDEX, BACKLOG, PROMPT_REPRISE, SESSIONS_HISTORY) | DFL-0 | 3 | S000
-| Creer structure repertoire dashboard-plugin/ + ui/ | DFL-0 | 1 | S000
-| Scaffold Gradle plugin minimal | DFL-0 | 2 | S000
-| Scaffold Vite + React + TypeScript + React Flow | DFL-1 | 2 | S001
-| Charger graph.json de graphify-gradle dans React Flow | DFL-1 | 3 | S001
-| Sidebar d'info + recherche simple | DFL-1 | 3 | S001
+| Bootstrap gouvernance (AGENT, INDEX, BACKLOG, PROMPT_REPRISE, SESSIONS_HISTORY) | DFL-0 | 3 | S000 ✅
+| Creer structure repertoire dashboard-plugin/ + ui/ | DFL-0 | 1 | S000 ✅
+| Scaffold Gradle plugin minimal | DFL-0 | 2 | S000 ✅
 |===
 
-== P1 — Planifie
+== EPIC DSH-BOUNDARY — territoire Brooklin Flow (cadré S-216)
+
+_Cadrage : `.agents/CADRAGE_EPIC_DSH_BOUNDARY.adoc`. Brooklin Flow =
+navigation (structure/relations), consomme `graph.json` + `dashboard-data.json`.
+Ne calcule jamais de metrique._
+
+*Phase 0* : la coquille du graphe (layout, filtres, panneau) est fixee par
+le prototype HTML/CSS/JS/mock (DSH-BOUNDARY-0P, cote ALGER) avant toute
+implementation React Flow. Gate bloquant.
 
 |===
-| Item | EPIC | Pts
-| Diff impact analysis (graph.json courant vs HEAD) | DFL-3 | 5
-| Enrichissement schema GraphModel (types + alias) | DFL-2 | 5
-| Fingerprinting incremental dans graphify | DFL-5 | 5
-| Deploiement gh-pages via runner-gradle | DFL-7 | 3
-| Publication Maven Central nmcp | PUB | 5
+| US | Description | Statut | Pts
+| DSH-BOUNDARY-5 | Graphe React Flow + filtres (couche N / borough / statut) + overlay `dashboard-data.json` + panneau recapitulatif au clic (absorbe DFL-1) | 🟡 À FAIRE | 5
+| DSH-BOUNDARY-6 | Diff structurel entre deux `graph.json` (nœuds/arêtes ajoutés/supprimés) — vue diff (absorbe DFL-3) | 🟡 À FAIRE | 5
+| DSH-BOUNDARY-7 | Publication gh-pages des 2 sites (ALGER + Brooklin Flow) via runner-gradle (absorbe DFL-7) | 🟡 À FAIRE | 1
+|===
+
+== P1 — Planifie (hors frontiere core, EPICs amont)
+
+|===
+| Item | EPIC | Pts | Statut
+| Enrichissement schema GraphModel (types + alias) — EPIC graphify (N0) | DFL-2 | 5 | 🟡 À FAIRE (graphify)
+| Fingerprinting incremental dans graphify — EPIC graphify (N0) | DFL-5 | 5 | 🟡 À FAIRE (graphify)
+| Publication Maven Central nmcp | PUB | 5 | 🟡 À FAIRE
 |===
 
 == P2 — Planifie
 
 |===
-| Item | EPIC | Pts
-| Guided tours auto-générés | DFL-4 | 5
-| Recherche sémantique via codebase-gradle RAG | DFL-6 | 5
-| Persona-adaptive UI | DFL-6 | 3
-| Wiki Karpathy ingestion | DFL-6 | 3
+| Item | EPIC | Pts | Statut
+| Guided tours auto-générés | DFL-4 | 5 | 🟡 À FAIRE
+| Recherche sémantique via codebase-gradle RAG | DFL-6 | 5 | 🟡 À FAIRE (codebase)
+| Persona-adaptive UI | DFL-6 | 3 | 🟡 À FAIRE
+| Wiki Karpathy ingestion | DFL-6 | 3 | 🟡 À FAIRE
+|===
+
+== Devenir des anciens items DFL
+
+|===
+| Item | Statut
+| Scaffold Vite + React + TypeScript + React Flow | ✅ Absorbé par DSH-BOUNDARY-5
+| Charger graph.json dans React Flow | ✅ Absorbé par DSH-BOUNDARY-5
+| Sidebar d'info + recherche simple | ✅ Absorbé par DSH-BOUNDARY-5
+| Diff impact analysis | ✅ Absorbé par DSH-BOUNDARY-6
+| Deploiement gh-pages | ✅ Absorbé par DSH-BOUNDARY-7
 |===
 
 == Historique
@@ -38,4 +63,5 @@
 |===
 | Date | Modification
 | 2026-06-23 | Creation du backlog initial avec DFL-0→DFL-7 + PUB
+| 2026-09-14 | S-001 — Cadrage DSH-BOUNDARY cross-borough : absorption DFL-1/2/3/5/7 vers le périmètre frontière, DFL-4/6 conservés en P2
 |===

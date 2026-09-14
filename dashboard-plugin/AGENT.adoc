@@ -156,7 +156,24 @@ cd ui && pnpm install && pnpm test && pnpm build
 | 1 | UI sans vrai graph.json | Toujours charger le graph.json de graphify-gradle
 | 2 | Logique LLM dans le frontend | L'enrichissement est pre-calculé par Gradle
 | 3 | Couper dashboard-gradle | dashboard-flow est complementaire, pas remplacant
+| 4 | Calculer des metriques / agreger la gouvernance | L'avancement est le territoire d'ALGER. Brooklin Flow CONSOMME `dashboard-data.json`, il ne le produit jamais
+| 5 | Parser les `.adoc` de gouvernance | La lecture de gouvernance appartient a ALGER. Brooklin Flow ne lit que `graph.json` (structure) + `dashboard-data.json` (overlay, read-only)
+| 6 | Ajouter un serveur / action Gradle dans l'UI | Les dashboards sont statiques et read-only. L'interactif avec etat vit dans Edster (prive)
 |===
+
+=== Frontiere Dashboard (S-216)
+
+*Brooklin Flow = navigation (le spatial)* : lit `graph.json` (graphify N0) et
+`dashboard-data.json` (overlay produit par ALGER), expose la
+structure/relations. Ne calcule jamais de metrique, ne parse jamais les
+`.adoc`.
+
+*ALGER = pilotage (les chiffres)* : lit la gouvernance `.adoc`, produit
+`dashboard-data.json`.
+
+*Edster (prive)* : l'interactif avec etat. Hors gouvernance publique.
+
+Reference complete : `.agents/CADRAGE_EPIC_DSH_BOUNDARY.adoc`.
 
 == References — Codebases LAZY
 

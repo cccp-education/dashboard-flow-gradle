@@ -1,0 +1,22 @@
+= COMPLETED_TASKS_ARCHIVE — Septembre 2026 — dashboard-flow-gradle
+
+== Sessions archivées
+
+|===
+| # | Date | Sujet | Livrables clés
+| 001 | 2026-09-14 | Cadrage EPIC DSH-BOUNDARY (cross-borough) | `CADRAGE_EPIC_DSH_BOUNDARY.adoc`, frontière navigation/structure, absorption DFL-1/3/7 → US-5/6/7, zéro code
+|===
+
+== EPICs / livrables clés
+
+- DFL-0 Bootstrap ✅
+- EPIC DSH-BOUNDARY ✅ CADRÉ (territoire navigation, 3 US ~11 pts)
+  - DSH-BOUNDARY-5 graphe React Flow + overlay
+  - DSH-BOUNDARY-6 diff structurel `graph.json`
+  - DSH-BOUNDARY-7 publication gh-pages
+
+== Points ouverts à reporter
+
+- DSH-BOUNDARY-5 → 7 (exécution)
+- DFL-2 / DFL-5 (EPICs graphify N0)
+- DFL-4 / DFL-6 / PUB (P2)

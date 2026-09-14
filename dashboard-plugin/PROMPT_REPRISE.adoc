@@ -1,21 +1,43 @@
 = PROMPT_REPRISE — dashboard-flow-gradle
-:session: 001
-:date: 2026-06-23
+:session: 002
+:date: 2026-09-14
 
-== Mission de la session en cours
+== Session accomplie (S-001, gouvernance pure, cross-borough)
 
-**DFL-1 — React Flow dashboard de base.**
+*Cadrage EPIC DSH-BOUNDARY — frontière Dashboard* (miroir côté ALGER S-216) :
 
-1. Scaffold Vite + React + TypeScript + React Flow dans `ui/`.
-2. Charger le `graph.json` produit par `graphify-gradle`.
-3. Rendre les nœuds et arêtes de base dans React Flow.
-4. Ajouter une sidebar d'information au clic sur un nœud.
-5. Ajouter une recherche simple par label ou type.
-6. Tests unitaires Vitest.
+1. Frontière actée : ALGER = pilotage (chiffres, `.adoc`) / Brooklin Flow
+   = navigation (structure, `graph.json`) / Edster = interactif privé.
+2. Brooklin Flow *consomme* `graph.json` + `dashboard-data.json` ; ne
+   calcule jamais de métrique, ne parse jamais les `.adoc`.
+3. Absorption DFL-1/DFL-3/DFL-7 → DSH-BOUNDARY-5/6/7. DFL-2/DFL-5 restent
+   EPICs graphify (N0). DFL-4/DFL-6 en P2.
+4. Doc : `.agents/CADRAGE_EPIC_DSH_BOUNDARY.adoc`.
+5. Zéro code modifié.
 
-== Références
+== Statut
 
-* `DASHBOARD_REACT_FLOW.adoc` (racine workspace)
-* `AGENT.adoc`
-* `.agents/INDEX.adoc`
-* `BACKLOG.adoc`
+- DFL-0 : ✅ TERMINÉ
+- DSH-BOUNDARY (territoire navigation, 3 US ~11 pts) : ✅ CADRÉ
+- DFL-4/DFL-6/PUB : 🟡 P2 à planifier
+
+== Prochaine session (002) — en attente de la Phase 0
+
+*Gate bloquant* : la coquille du graphe (layout, filtres, panneau) est
+fixée par le prototype HTML/CSS/JS/mock (DSH-BOUNDARY-0P, côté ALGER)
+avant toute implémentation React Flow. Ne pas démarrer DSH-BOUNDARY-5
+avant validation pilote du prototype.
+
+*Ensuite* : DSH-BOUNDARY-5 — graphe React Flow (scaffold Vite + React +
+TypeScript), chargement de `graph.json`, filtres (couche N / borough /
+statut), coloration des nœuds par `dashboard-data.json`, panneau
+récapitulatif au clic. Baby-step DDD/TDD/BDD strict RED → GREEN → REFACTOR.
+
+*Prérequis* : DSH-BOUNDARY-2 (contrat `dashboard-data.json` versionné,
+côté ALGER) doit être livré avant l'overlay.
+
+== Vérifications ouverture
+
+. `git status` — dashboard-flow-gradle committé/poussé ?
+. Lire `.agents/CADRAGE_EPIC_DSH_BOUNDARY.adoc` § Ordre d'exécution
+. Vérifier que `graph.json` est disponible (office/ ou graphify)

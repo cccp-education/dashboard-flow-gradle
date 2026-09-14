@@ -3,4 +3,5 @@
 |===
 | # | Date | Objet | Fichiers
 | 000 | 2026-06-23 | Bootstrap gouvernance Dashboard-Flow — AGENT.adoc, INDEX.adoc, PROMPT_REPRISE, BACKLOG, TODO, SESSIONS_HISTORY, structure repertoire, integration portefeuille dashboard-gradle + AGENTS.adoc racine workspace | 8+ fichiers crees
+| 001 | 2026-09-14 | Cadrage EPIC DSH-BOUNDARY cross-borough (miroir ALGER S-216) — frontière navigation/structure, absorption DFL-1/3/7 → US-5/6/7, DFL-2/5 EPICs graphify, DFL-4/6 P2, zéro code | .agents/CADRAGE_EPIC_DSH_BOUNDARY.adoc, .agents/sessions/001-cadrage-dsh-boundary.adoc, AGENT.adoc, BACKLOG.adoc, INDEX.adoc, PROMPT_REPRISE.adoc, SESSIONS_HISTORY.adoc
 |===
