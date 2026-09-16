@@ -1,6 +1,6 @@
 = BACKLOG — dashboard-flow-gradle
 
-_Dernière mise à jour : 2026-09-14 (S-001 — Cadrage EPIC DSH-BOUNDARY cross-borough, S-216 côté ALGER : frontière ALGER / Brooklin Flow / Edster. Absorption DFL-1/DFL-3/DFL-7. Zéro code modifié.)_
+_Dernière mise à jour : 2026-09-17 (cross-borough — DFL-2 livré par graphify S-025 : EPIC GF-SCHEMA 4/5 US, domaine `graphify.schema` + alias non destructifs, `graph.json` byte-identique. DFL-5 reste à faire côté graphify.)_
 
 == P0 — Termine
 
@@ -32,8 +32,8 @@ implementation React Flow. Gate bloquant.
 
 |===
 | Item | EPIC | Pts | Statut
-| Enrichissement schema GraphModel (types + alias) — EPIC graphify (N0) | DFL-2 | 5 | 🟡 À FAIRE (graphify)
-| Fingerprinting incremental dans graphify — EPIC graphify (N0) | DFL-5 | 5 | 🟡 À FAIRE (graphify)
+| Enrichissement schema GraphModel (types + alias) — EPIC graphify (N0) | DFL-2 | 5 | ✅ TERMINÉ (graphify S-025 — domaine `graphify.schema`, alias + canonicalisation, `graph.json` inchangé/byte-identique ; reste GF-SCHEMA-5 `schemaVersion` différé)
+| Fingerprinting incremental dans graphify — EPIC graphify (N0) | DFL-5 | 5 | 🟡 À FAIRE (graphify — EPIC GF-FINGERPRINT, non planifié)
 | Publication Maven Central nmcp | PUB | 5 | 🟡 À FAIRE
 |===
 
@@ -64,4 +64,5 @@ implementation React Flow. Gate bloquant.
 | Date | Modification
 | 2026-06-23 | Creation du backlog initial avec DFL-0→DFL-7 + PUB
 | 2026-09-14 | S-001 — Cadrage DSH-BOUNDARY cross-borough : absorption DFL-1/2/3/5/7 vers le périmètre frontière, DFL-4/6 conservés en P2
+| 2026-09-17 | DFL-2 ✅ TERMINÉ côté graphify (S-025, EPIC GF-SCHEMA 4/5 US) — schéma explicite + alias, `graph.json` inchangé. DFL-5 (fingerprinting) reste à faire.
 |===
