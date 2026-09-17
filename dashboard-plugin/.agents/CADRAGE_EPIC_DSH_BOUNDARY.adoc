@@ -326,7 +326,7 @@ NIVEAU 1 ─ 2 pages secondaires (1 clic depuis la home, 0 sous-niveau)
 | Recadré sous la frontière (overlay + panneau, pas d'agrégation).
 
 | DFL-2 (enrichissement schéma graphify)
-| *Reste* — EPIC graphify
+| *Reste* — EPIC graphify → ✅ TERMINÉ (S-025, EPIC GF-SCHEMA 4/5 US)
 | La structure du schéma est produite par graphify (N0), pas par le dashboard.
 
 | DFL-3 (diff impact)
@@ -338,7 +338,7 @@ NIVEAU 1 ─ 2 pages secondaires (1 clic depuis la home, 0 sous-niveau)
 | Navigation structurelle, cohérent avec le graphe.
 
 | DFL-5 (fingerprinting incremental)
-| *Reste* — EPIC graphify
+| *Reste* — EPIC graphify → ✅ TERMINÉ (S-026, EPIC GF-FINGERPRINT 6/6 US)
 | Optimisation de production du graphe (N0).
 
 | DFL-6 (RAG + persona + wiki)
