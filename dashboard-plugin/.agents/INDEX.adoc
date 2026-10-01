@@ -109,3 +109,4 @@ _Toute modification du code source du plugin DOIT etre suivie de `./gradlew -q p
 * BACKLOG : `BACKLOG.adoc`
 * TODO : `TODO.adoc`
 * PROMPT_REPRISE : `PROMPT_REPRISE.adoc`
+
