@@ -110,3 +110,9 @@ _Toute modification du code source du plugin DOIT etre suivie de `./gradlew -q p
 * TODO : `TODO.adoc`
 * PROMPT_REPRISE : `PROMPT_REPRISE.adoc`
 
+
+== Session 002 — EAGER : publication JitPack canal unique (2026-11-14)
+
+Alignement EAGER (AGENT/PROMPT_REPRISE) : JitPack canal unique ;
+Central/Portal retirés. Zéro code. Rapport
+`.agents/sessions/002-eager-publication-jitpack-only.adoc`.
