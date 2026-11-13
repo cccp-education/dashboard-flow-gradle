@@ -121,7 +121,7 @@ cd ui && pnpm install && pnpm test && pnpm build
 | DFL-5 | Fingerprinting incremental | P2 | PLANIFIE
 | DFL-6 | RAG + persona UI + wiki | P2 | PLANIFIE
 | DFL-7 | Deploiement gh-pages via runner | P1 | PLANIFIE
-| PUB | Publication Maven Central nmcp | P1 | PLANIFIE
+| PUB | Publication JitPack | P1 | PLANIFIE
 |===
 
 == Gestion du Contexte
